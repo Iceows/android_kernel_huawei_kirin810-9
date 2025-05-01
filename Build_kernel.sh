@@ -27,7 +27,8 @@ start_time=$(date +%Y.%m.%d-%I_%M)
 start_time_sum=$(date +%s)
 
 echo "Saisissez pour quel appareil vous voulez compiler："
-echo "1. OpenSource Huawei defconfig orlando kirin 810 EMUI9.1"
+echo "1. OpenSource Huawei orlando kirin 810 EMUI9.1"
+echo "2. OpenSource Iceows kirin 810 EMUI9.1"
 echo "Votre choix :"
 
 read choice
@@ -35,6 +36,9 @@ read choice
 case $choice in
   1)
     defconfig="merge_orlando_defconfig"
+    ;;
+  2)
+    defconfig="merge_810_defconfig"
     ;;
   *)
     echo "Aucun choix - fin du script"
